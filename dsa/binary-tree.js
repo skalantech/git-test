@@ -13,7 +13,7 @@ class BinarySearchTree {
     }
 
     insert(data) {
-        var newNode = new Node(data);
+        let newNode = new Node(data);
 
         if(this.root === null)
             this.root = newNode;
@@ -119,7 +119,7 @@ class BinarySearchTree {
     }
 }
 
-var BST = new BinarySearchTree();
+let BST = new BinarySearchTree();
 
 BST.insert(15);
 BST.insert(25);
@@ -132,7 +132,7 @@ BST.insert(5);
 BST.insert(9);
 BST.insert(27);
 
-var root = BST.getRootNode();
+let root = BST.getRootNode();
 
 console.log('inorder:');
 BST.inorder(root);
@@ -151,12 +151,12 @@ BST.postorder(root);
 
 console.log('removing 5')
 BST.remove(5);
-var root = BST.getRootNode();
+root = BST.getRootNode();
 BST.inorder(root);
 
 console.log('removing 15')
 BST.remove(15);
-var root = BST.getRootNode();
+root = BST.getRootNode();
 BST.inorder(root);
 
 //          17

@@ -34,5 +34,73 @@
     </script>
 
     <script src="myScript.js"></script>
+
+    <p id="demo2"></p>
+
+    <script>
+        document.getElementById('demo2').innerHTML = 5 + 6
+    </script>
+
+    <script>document.write(5 + 7)</script>
+
+    <button type="button" onclick="document.write('BOOM!!!')">Blow the page out</button>
+
+    <script>window.alert("Hello User!!!")</script> <!--window is optional-->
+
+    <script>console.log(5*4)</script>
+
+    <button onclick="window.print()">Print this page!</button>
+
+    <p id="demo3"></p>
+
+    <script>
+        // Create an object
+        const person = {
+            firstName: "Carlos",
+            lastName: "Escalante",
+            id: 34915,
+            fullname: function() {
+                return this.firstName + " " + this.lastName;
+            }
+        };
+
+        document.getElementById('demo3').innerHTML = person.fullname();
+    </script>
+
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <script>
+        const person1 = {prenom: "Gael", nom:"Escalante", age:1, yeux:"brown"};
+        const person2 = {prenom: "Alissa", nom: "Escalante", age:1, yeux:"bleu"};
+
+        document.getElementById("demo4").innerHTML = person1.prenom + " "+ person1.nom + " is " + person1.age + " years old.";
+
+        document.getElementById("demo5").innerHTML = person2.prenom + " "+ person2.nom + " is " + person2.age + " years old.";
+    </script>
+
+    <p id="demo6"></p>
+    <script>
+        let text = "The temperature is " + toCelsius(77) + " Celsius."
+        function toCelsius(fahrenheit) {
+            return (5/9) * (fahrenheit-32);
+        }
+
+        document.getElementById("demo6").innerHTML = text;
+    </script>
+
+    <!-- Events -->
+    <button onclick="document.getElementById('demo7').innerHTML=Date()">The time is:</button>
+    <p id="demo7"></p>
+
+    <button onclick="this.innerHTML=Date()">The time is?</button>
+    <br>
+    
+    <button onclick="displayDate()">The time is?</button>
+    <script>
+        function displayDate() {
+            document.getElementById('demo8').innerHTML = Date();
+        }
+    </script>
+    <p id="demo8"></p>
 </body>
 </html>

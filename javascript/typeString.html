@@ -117,6 +117,30 @@
         document.getElementById('demo10').innerHTML = text;
     </script>
 
+    <p id="demo101"></p>
+
+    <!-- search -->
+    <script>
+        let text10 = "I love cats. Cats are very easy to love. Cats are very popular."
+        const iterator = text10.match(/Cats/gi);
+
+        document.getElementById("demo101").innerHTML = Array.from(iterator);
+    </script>
+
+    <!-- template literals -->
+    <p id="demo11"></p>
+    <script>
+        let header = "Template Literals";
+        let tags = ["template literals", "javascript", "es6"];
+        let html = `<h2>${header}</h2><ul>`;
+        
+        for(const x of tags) {
+            html += `<li>${x}</li>`;
+        }
+
+        html += `</ul>`;
+        document.getElementById('demo11').innerHTML = html;
+    </script>
 
 </body>
 </html>

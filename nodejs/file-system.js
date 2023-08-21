@@ -11,3 +11,5 @@ fs.readFile('thefile.txt', 'utf8', (err, data) => {
     console.log('File contents:');
     console.log(data);
 });
+
+console.log('do this ASAP');

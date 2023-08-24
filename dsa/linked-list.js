@@ -136,13 +136,14 @@ class LinkedList {
 }
 
 // Testing functions
+function main() {
+    const linkedList = new LinkedList();
 
-const linkedList = new LinkedList();
-
-linkedList.insert(7);
-linkedList.insert(8);
-linkedList.insertHead(9);
-linkedList.insertHead(10);
-linkedList.removeIndex(2);
-console.log(linkedList.length); // 3
-linkedList.print(); // 10 9 8
+    linkedList.insert(7);
+    linkedList.insert(8);
+    linkedList.insertHead(9);
+    linkedList.insertHead(10);
+    linkedList.removeIndex(2);
+    console.log(linkedList.length); // 3
+    linkedList.print(); // 10 9 8
+}

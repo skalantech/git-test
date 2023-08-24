@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>JavaScript Arrays</h1>
+
+        <p id="demo"></p>
+        <p id="demo0"></p>
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+        <p id="demo3"></p>
+        <p id="demo4"></p>
+        <p id="demo5"></p>
+        <p id="demo6"></p>
+        <p id="demo7"></p>
+        <p id="demo8"></p>
+        <p id="demo9"></p>
+        <p id="demo10"></p>
+        <p id="demo11"></p>
+        <script>
+            const cars = ["Saab", "Volvo", "BMW"];
+            cars[0] = "Toyota";
+            cars.push("Hyundai");
+            document.getElementById('demo').innerHTML = cars;
+            document.getElementById('demo0').innerHTML = cars.toString();
+            
+            const person = ["John", "Doe", 46];
+            document.getElementById('demo1').innerHTML = person[0];
+            document.getElementById('demo2').innerHTML = person[1];
+            document.getElementById('demo3').innerHTML = person[2];
+            
+            const personObj = {firstName:"Carlos", lastName:"Escalante", age:41};
+            document.getElementById('demo4').innerHTML = personObj.firstName;
+            document.getElementById('demo5').innerHTML = personObj.lastName;
+            document.getElementById('demo6').innerHTML = personObj.age;
+            document.getElementById('demo7').innerHTML = "the length of the person array: " + person.length;
+
+            let text = "<ul>";
+            let pLen = person.length;
+            for(let i = 0; i < pLen; i++) {
+                text += "<li>" + person[i] + "</li>";
+            }
+            text += "</ul>";
+            document.getElementById('demo8').innerHTML = text;
+
+            let text1 = "<ul>";
+                cars.forEach(myFunc1);
+            text1 += "</ul>";
+            function myFunc1(value) {
+                text1 += "<li>" + value + "</li>";
+            }
+            document.getElementById('demo9').innerHTML = text1;
+
+            const fruits = ["Banana", "Orange", "Apple", "Strawberry", "mango"];
+            fruits[6] = "pears";
+
+            let fLen = fruits.length;
+            let text2 = "";
+            for(i = 0; i < fLen; i++) {
+                text2 += fruits[i] + "<br>";
+            }
+            document.getElementById("demo10").innerHTML = text2;
+            document.getElementById("demo11").innerHTML = "is array: " + Array.isArray(cars) + ", typeof() returns: " + typeof(personObj);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="test" onclick="onButtonClick();" />
+    <p id="boolValue"></p>
+    <script>
+        var buttonClicks = 0;
+        var boolValue = true;
+        var boolValueOutput = document.getElementById("boolValue")
+
+        boolValueOutput.innerHTML = boolValue;
+
+        function onButtonClick()
+        {
+        buttonClicks++;
+
+        // If you want it to only work once uncomment this
+        //if (buttonClicks > 2)
+        //  return;
+        
+        boolValue = !boolValue;
+        boolValueOutput.innerHTML = boolValue;
+        }
+    </script>
+</body>
+</html>
+
